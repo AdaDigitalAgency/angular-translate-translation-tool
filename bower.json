@@ -1,0 +1,31 @@
+{
+  "name": "AngulatTranslateTranslationTool",
+  "authors": [
+    "Emre Erkan <emre@ada.agency>"
+  ],
+  "description": "A little tool to edit or create json translation files for Angular Translate.",
+  "main": "index.html",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "angular",
+    "bootstrap",
+    "bootflat",
+    "html5",
+    "web-app"
+  ],
+  "license": "GPL-v2",
+  "homepage": "https://attt.github.io",
+  "ignore": [
+    "**/.*",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "bootstrap": "~3.3.6",
+    "Bootflat": "~2.0.4"
+  }
+}
