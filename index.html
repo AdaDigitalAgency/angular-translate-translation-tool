@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Translate Translation Tool</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootflat.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/default.css">
+</head>
+<body ng-controller="appController">
+  <div class="container-fluid">
+    <header class="row">
+      <nav role="navigation" class="navbar navbar-inverse noselect" style="-webkit-app-region: drag;">
+        <p class="navbar-text">Angular Translate Translation Tool</p>
+        <div class="navbar-text pull-right btn-group" style="-webkit-app-region: no-drag;">
+          <a href="https://github.com/adadigitalagency/attt" target="_blank" class="btn btn-xs btn-warning" ><i class="glyphicon glyphicon-info-sign"></i></a>
+        </div>
+      </nav>
+    </header>
+    <section class="row">
+      <div class="container-fluid">
+        <div class="panel panel-primary" ng-repeat="(key, strings) in strings">
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>Key: </strong>{{ key }}</h3>
+          </div>
+          <div class="panel-body">
+            <p><strong>Original: </strong> {{ strings.original }}</p>
+            <p><strong>Translation: </strong><br /><textarea>{{ strings.translation }}</textarea></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <div class="container-fluid">
+      <button class="btn btn-primary" ng-click="load('original')">Load Original</button>
+      <button class="btn btn-warning" ng-click="load('translation')">Load Translation</button>
+      <button class="btn btn-info pull-right" ng-click="save()">Save</button>
+    </div>
+  </footer>
+  <input type="file" class="file-original" />
+  <input type="file" class="file-translation" />
+  <script src="assets/js/angular.min.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/FileSaver.js"></script>
+  <script src="assets/js/default.js"></script>
+</body>
+</html>
