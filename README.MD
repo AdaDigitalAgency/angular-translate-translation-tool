@@ -12,7 +12,7 @@ Simply `checkout` the project and use `bower` to install.
 
     $ git clone https://github.com/adadigitalagency/angular-translate-translation-tool.git
     $ cd angular-translate-translation-tool
-    $ bower install
+    $ bower install --config.directory=libs
 
 ## Changelog
 
