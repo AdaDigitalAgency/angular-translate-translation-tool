@@ -10,8 +10,8 @@ mainApp.controller("appController", function($scope) {
   };
 
   $scope.save = function() {
-    var data = $scope.strings;
-    $.each(data, function(key, item) {      
+    var data = {};
+    $.each($scope.strings, function(key, item) {      
       data[key] = item.translation;
     });
     saveTextAs(JSON.stringify(data), $scope.outputfile);
